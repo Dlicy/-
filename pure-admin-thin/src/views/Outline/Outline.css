@@ -1,0 +1,94 @@
+.fullscreen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh; /* 保持视口高度的85% */
+  position: relative; /* 保持相对定位 */
+  background-image: url("./Huibao.jpg");
+  background-size: cover;
+  /* 移除 position: absolute; */
+}
+
+
+
+.rectangle-pair {
+  position: relative;
+  display: flex;
+  justify-content: center; /* 新增的样式，使得子元素水平居中 */
+  align-items: center; /* 新增的样式，使得子元素垂直居中 */
+  width: 390px; /* 新增的样式，设置容器的宽度 */
+  height: 750px; /* 新增的样式，设置容器的高度 */
+  margin: 0 160px;
+  margin-top: 500px;
+}
+
+.rectangle {
+  width: 300px;
+  height: 150px;
+  background-color: #4da3dd;
+  border-radius: 35px;
+  position: absolute;
+  z-index: 2;
+}
+
+.grey-rectangle {
+  background: radial-gradient(circle, rgba(128, 128, 128, 1) 0%, rgba(128, 128, 128, 1) 100%);
+  border-radius: 35px;
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  height: 150px;
+  box-shadow: 10px 10px 25px 10px rgba(128, 128, 128, 0.6); /* 增加阴影的模糊距离、扩展距离和不透明度 */
+}
+
+
+.grey-rectangle-1 {
+  transform: translate(0px, 0px);
+}
+
+.grey-rectangle-2 {
+  transform: translate(0px, 0px);
+}
+
+.grey-rectangle-3 {
+  transform: translate(0px, 0px);
+}
+
+.my-button {
+  position: absolute; /* 设置为绝对定位，以便它可以浮动在其他元素之上 */
+  top: 50%; /* 将按钮的顶部定位到矩形对容器的中心（或根据需要调整） */
+  left: 50%; /* 将按钮的左侧定位到矩形对容器的中心（或根据需要调整） */
+  transform: translate(-50%, -50%); /* 使用transform将按钮的中心点移动到其定位的点 */
+  z-index: 10; /* 设置一个较高的z-index值以确保按钮显示在其他元素之上 */
+  /* 其他样式，如宽度、高度、背景色等 */
+}
+
+.new-buttons-wrapper {
+  /* 使用Flexbox来居中.new-buttons-wrapper */
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  flex-direction: column;
+  height: 100vh; /* 全屏高度 */
+}
+
+.new-buttons-wrapper .my-btton {
+
+  margin-bottom: 20px; /* 每个按钮之间的间距 */
+  margin-left: 10px;
+  display: inline-block; /* 默认就是inline-block，但明确写出可以避免混淆 */
+  padding: 10px 10px; /* 添加一些内边距，使按钮看起来更明显 */
+  background-color: #007BFF; /* 蓝色背景 */
+  color: white; /* 白色文字 */
+  border: none; /* 去除边框 */
+  border-radius: 4px; /* 添加圆角 */
+  cursor: pointer; /* 鼠标悬停时变为手形图标 */
+  text-align: center; /* 虽然对于按钮来说这不是必须的，但明确写出可以确保文本居中 */
+}
+
+/* 移除最后一个按钮的底部外边距以避免额外空间 */
+.new-buttons-wrapper .my-btton:last-child {
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+

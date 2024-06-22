@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/lodash": "^4.17.4",
+    "canvas-nest.js": "^2.0.4",
+    "file-saver": "^2.0.5"
+  },
+  "devDependencies": {
+    "vue-particles": "^1.0.9"
+  }
+}
